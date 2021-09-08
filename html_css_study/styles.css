@@ -1,0 +1,112 @@
+body > div {
+  padding: 0 10px 50px 10px;
+}
+.ex span {
+  background-color: wheat;
+}
+.ex p span {
+  color: white;
+}
+.ex p::first-letter {
+  background: cornflowerblue;
+  font-size: 30px;
+} /*첫 글자*/
+.ex p::first-line {
+  text-decoration: underline;
+} /*첫 문장*/
+.ex p::selection {
+  background: orange;
+} /*p드래그하면 orage색으로 드래그 됨*/
+.ex p ~ span {
+  text-decoration: underline;
+} /*p 뒤에 있는 모든 span*/
+.ex p + span {
+  font-weight: bold;
+  background: thistle;
+} /*p 바로 뒤에 있는 span만*/
+
+input {
+  color: orange;
+}
+input::placeholder {
+  color: blue;
+}
+input[placeholder="user name"] {
+  border-color: cornflowerblue;
+}
+input:focus {
+  background: yellowgreen;
+}
+input:required {
+  border-color: coral;
+} /*required 요소가 있는 input 태그*/
+input[placeholder~="name"] {
+  background: wheat;
+} /*~= 은 placeholder에 name을 포함하고 있는 태그*/
+
+:root {
+  --main-color: #489ee3;
+  --default-border: 1px solid var(--main-color);
+} /*custom property => https://developer.mozilla.org/ko/docs/Web/CSS/Using_CSS_custom_properties*/
+.rootcolor p {
+  background-color: var(--main-color);
+}
+.rootcolor > span {
+  color: var(--main-color); /*var는 변수의 그 var 맞음 ㅇㅇ..*/
+  border: var(--default-border);
+}
+
+.image {
+  display: flex;
+}
+.image a {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image a img {
+  width: 150px;
+}
+
+.image a:first-child img {
+  transition: all 0.5s;
+}
+.image a:first-child:hover img {
+  transform: rotateY(180deg);
+  width: 240px;
+}
+.image a:first-child span {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3px 8px 5px;
+  color: white;
+}
+.image a:first-child:hover span {
+  display: none;
+}
+
+@keyframes imageMoveAnimation {
+  0% {
+    transform: translate(0px, -80px);
+  }
+  20% {
+    transform: translate(80px, 80px);
+  }
+  40% {
+    transform: translate(-80px, 0px);
+  }
+  60% {
+    transform: translate(80px, 0px);
+  }
+  80% {
+    transform: translate(-40px, 80px);
+  }
+  100% {
+    transform: translate(0px, -80px);
+  }
+}
+.image a:last-child img {
+  animation: imageMoveAnimation 3s ease-in-out infinite;
+}
