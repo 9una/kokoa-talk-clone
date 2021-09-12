@@ -22,16 +22,16 @@
 }
 
 .nav__notification {
+  position: absolute;
+  right: -10px;
+  top: -15px;
+}
+
+.nav__notification-dot {
   background-color: tomato;
-  width: 20px;
-  height: 20px;
-  color: white;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  font-weight: 600;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   right: -10px;
   top: -15px;
