@@ -36,11 +36,11 @@
 }
 #login-form input:focus {
   border-width: 2px;
-  border-color: var(--creamlemon);
+  border-color: var(--yellow);
 }
 #login-form input[type="submit"] {
   margin-top: 20px;
-  background-color: var(--creamlemon);
+  background-color: var(--yellow);
   cursor: pointer;
   padding: 20px 0;
   border-radius: 5px;

@@ -123,7 +123,9 @@ table {
   border-spacing: 0;
 }
 
-input:focus {
+input:focus,
+button:focus,
+button:active {
   outline: none;
 } /*추가*/
 a {

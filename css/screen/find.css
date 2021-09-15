@@ -87,3 +87,22 @@
 .open-post__heart-count span {
   margin-left: 5px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+} /*will-change:애니메이션이 element에 실행될거라고 브라우저에게 적절하게 최적화할 수 있게끔하라고 말해주는거*/
