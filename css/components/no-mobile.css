@@ -4,7 +4,7 @@
   z-index: 99;
   height: 100vh;
   width: 100vw;
-  background-color: blueviolet;
+  background: linear-gradient(120deg, #9600ff, #ff8ddb);
   display: flex;
   justify-content: center;
   align-items: center;
