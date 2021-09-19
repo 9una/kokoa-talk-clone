@@ -24,5 +24,8 @@
 }
 
 .status-bar__column .fa-battery-three-quarters {
-  margin: 0 5px;
+  margin: 0 10px;
+}
+.status-bar__column .fa-bolt {
+  padding-right: 5px;
 }
